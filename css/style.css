@@ -9766,23 +9766,7 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
-/* Fix hero section in mobile view */
-@media (max-width: 768px) {
-  .hero, 
-  .slider-item, 
-  .one-third.img, 
-  .one-forth {
-    height: auto !important;   /* let content decide height */
-    min-height: 100vh;         /* at least one screen */
-    background-size: cover;    /* keep image responsive */
-    background-position: center;
-  }
-}
-.one-third.img {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+/* ✅ Force scrolling fix */
 html, body {
   overflow-y: auto !important;
   overflow-x: hidden !important;
@@ -9790,19 +9774,25 @@ html, body {
   position: relative !important;
 }
 
-.hero, 
-.home-slider, 
+/* ✅ Hero & slider responsiveness */
+.hero,
+.home-slider,
 .slider-item {
   height: auto !important;
-  min-height: 100vh;   /* covers screen but lets you scroll */
+  min-height: 100vh;
   position: relative !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.owl-carousel .owl-stage-outer {
-  height: auto !important;
+/* ✅ Ensure images inside hero are responsive */
+.one-third.img,
+.one-forth.img {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
 }
-
-
-
-
-
