@@ -19,6 +19,17 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 	<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.innerWidth < 768) {
+      // Disable scrollax on mobile
+      document.querySelectorAll("[data-scrollax]").forEach(el => {
+        el.removeAttribute("data-scrollax");
+      });
+    }
+  });
+</script>
+
+	<script>
   document.addEventListener("DOMContentLoaded", function () {
     var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     var navbarCollapse = document.querySelector('.navbar-collapse');
