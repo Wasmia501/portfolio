@@ -9784,17 +9784,20 @@ textarea.form-control {
   background-repeat: no-repeat;
 }
 html, body {
-  overflow-x: hidden;
-  overflow-y: auto !important; /* force scroll */
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
   height: auto !important;
-}
-.hero,
-.home-slider,
-.slider-item {
   position: relative !important;
-  height: auto !important;
-  min-height: 100vh; /* take up screen but allow scroll */
 }
+
+.hero, 
+.home-slider, 
+.slider-item {
+  height: auto !important;
+  min-height: 100vh;   /* covers screen but lets you scroll */
+  position: relative !important;
+}
+
 .owl-carousel .owl-stage-outer {
   height: auto !important;
 }
