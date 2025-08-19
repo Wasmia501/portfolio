@@ -9766,4 +9766,23 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+/* Fix hero section in mobile view */
+@media (max-width: 768px) {
+  .hero, 
+  .slider-item, 
+  .one-third.img, 
+  .one-forth {
+    height: auto !important;   /* let content decide height */
+    min-height: 100vh;         /* at least one screen */
+    background-size: cover;    /* keep image responsive */
+    background-position: center;
+  }
+}
+.one-third.img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
 
