@@ -20,6 +20,18 @@
 </head>
 	<script>
   document.addEventListener("DOMContentLoaded", function() {
+    // Force enable scrolling even if Scrollax disables it
+    setInterval(function() {
+      document.documentElement.style.overflowY = "auto";
+      document.documentElement.style.height = "auto";
+      document.body.style.overflowY = "auto";
+      document.body.style.height = "auto";
+    }, 500);
+  });
+</script>
+
+	<script>
+  document.addEventListener("DOMContentLoaded", function() {
     if (window.innerWidth < 768) {
       // Disable scrollax on mobile
       document.querySelectorAll("[data-scrollax]").forEach(el => {
