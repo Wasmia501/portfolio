@@ -9783,6 +9783,23 @@ textarea.form-control {
   background-position: center;
   background-repeat: no-repeat;
 }
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto !important; /* force scroll */
+  height: auto !important;
+}
+.hero,
+.home-slider,
+.slider-item {
+  position: relative !important;
+  height: auto !important;
+  min-height: 100vh; /* take up screen but allow scroll */
+}
+.owl-carousel .owl-stage-outer {
+  height: auto !important;
+}
+
+
 
 
 
